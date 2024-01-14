@@ -1,3 +1,8 @@
+from Crypto.PublicKey import ECC
+
+f = open('myprivatekey.pem','rt')
+key = ECC.import_key(f.read())
+
 import socket
 
 # address of the server
