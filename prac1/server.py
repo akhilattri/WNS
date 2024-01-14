@@ -1,3 +1,11 @@
+from Crypto.PublicKey import ECC
+
+key = ECC.generate(curve='P-256')
+
+f = open('myprivatekey.pem','wt')
+f.write(key.export_key(format='PEM'))
+f.close()
+
 import socket
 
 # host = 'localhost'
@@ -22,11 +30,3 @@ while True:
     communication_socket.send(f"Recieved your message!".encode('utf-8'))
     communication_socket.close()
     print(f"Connected Ended with {address}")
-
-from Crypto.PublicKey import ECC
-
-key = ECC.generate(curve='P-256')
-
-f = open('myprivatekey.pem','wt')
-f.write(key.export_key(format='PEM'))
-f.close()
