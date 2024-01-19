@@ -61,7 +61,7 @@ def start_client():
     print("Received Message:", decrypted_message.decode())
 
     # Example message to be encrypted and sent to the server
-    message = b"Hello, server!"
+    message = b"Secret Message from Client"
     ciphertext = encrypt(message, shared_key)
     client_socket.sendall(ciphertext)
 

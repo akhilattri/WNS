@@ -62,7 +62,7 @@ def start_server():
     print("Shared Key:", shared_key.hex())
 
     # Example message to be encrypted
-    message = b"Hello, client!"
+    message = b"Secret Message from Server"
 
     # Encrypt and send the message
     ciphertext = encrypt(message, shared_key)
